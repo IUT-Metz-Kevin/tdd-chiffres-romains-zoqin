@@ -5,7 +5,9 @@ class RomanNumeral {
     let number = 0
 
     for(let c of value) {
-        if(c === "C") {
+        if(c === "D") {
+            number += 500
+        } else if(c === "C") {
             number += 100
         } else if(c === "L") {
             number += 50
