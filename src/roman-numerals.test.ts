@@ -22,5 +22,6 @@ it("should give 1-2-3 for first 3I ", function() {
 });
 
 it("should give 4 for IV", function() {
-    expect(convertiseurRoman.of("IV")).toBe(4)
+    //ceci a était ajouté
+    expect(convertiseurRoman.of("IV")).toBe(4) 
 })
