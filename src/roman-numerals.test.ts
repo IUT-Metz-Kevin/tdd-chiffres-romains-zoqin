@@ -5,6 +5,13 @@ class RomanNumeral {
     let number = 0
 
     for(let c of value) {
+        if(c === "V") {
+            if(value[value.indexOf(c)-1] === "I") {
+                //do nothing
+            } else {
+                number += 5
+            }
+        }
         if(c === "I") {
             if(value[value.indexOf(c)+1] === "V") {
                 number += 4
@@ -32,4 +39,8 @@ it("should give 4 for IV", function() {
 
 it("should give 5 for V", function() {
     expect(convertiseurRoman.of("V")).toBe(5)
+})
+
+it("should give 10 for X", function() {
+    expect(convertiseurRoman.of("X")).toBe(10)
 })
