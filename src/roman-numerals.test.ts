@@ -7,18 +7,15 @@ class RomanNumeral {
     for(let c of value) {
         if(c === "L") {
             number += 50
-        }
-        if(c === "X") {
+        } else if (c === "X") {
             number += 10
-        }
-        if(c === "V") {
+        } else if(c === "V") {
             if(value[value.indexOf(c)-1] === "I") {
                 //do nothing
             } else {
                 number += 5
             }
-        }
-        if(c === "I") {
+        } else if(c === "I") {
             if(value[value.indexOf(c)+1] === "V") {
                 number += 4
             } else {
