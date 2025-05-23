@@ -5,6 +5,9 @@ class RomanNumeral {
     let number = 0
 
     for(let c of value) {
+        if(c === "X") {
+            number += 10
+        }
         if(c === "V") {
             if(value[value.indexOf(c)-1] === "I") {
                 //do nothing
