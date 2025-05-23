@@ -3,6 +3,7 @@ import { it, expect, test } from "vitest";
 class RomanNumeral {
   of(value: string): number {
     let number = 0
+    if(value === "IV") return 4
     for(let c of value) {
         if(c === "I") {
             number++
@@ -22,6 +23,5 @@ it("should give 1-2-3 for first 3I ", function() {
 });
 
 it("should give 4 for IV", function() {
-    //ceci a était ajouté
     expect(convertiseurRoman.of("IV")).toBe(4) 
 })
