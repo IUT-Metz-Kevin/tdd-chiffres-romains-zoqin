@@ -3,10 +3,14 @@ import { it, expect, test } from "vitest";
 class RomanNumeral {
   of(value: string): number {
     let number = 0
-    if(value === "IV") return 4
+    //if(value === "IV") return 4
     for(let c of value) {
         if(c === "I") {
-            number++
+            if(value[value.indexOf(c)+1] === "V") {
+                number += 4
+            } else {
+                number++
+            }
         }
     }
     return number
