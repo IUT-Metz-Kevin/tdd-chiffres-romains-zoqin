@@ -15,8 +15,12 @@ class RomanNumeral {
 let convertiseurRoman = new RomanNumeral()
 
 // Write your test here
-it("First 3I should give 1-2-3", function() {
+it("should give 1-2-3 for first 3I ", function() {
     expect(convertiseurRoman.of("I")).toBe(1),
     expect(convertiseurRoman.of("II")).toBe(2),
     expect(convertiseurRoman.of('III')).toBe(3);
 });
+
+it("should give 4 for IV", function() {
+    expect(convertiseurRoman.of("IV")).toBe(4)
+})
