@@ -3,7 +3,7 @@ import { it, expect, test } from "vitest";
 class RomanNumeral {
   of(value: string): number {
     let number = 0
-    
+
     for(let c of value) {
         if(c === "I") {
             if(value[value.indexOf(c)+1] === "V") {
@@ -28,4 +28,8 @@ it("should give 1-2-3 for first 3I ", function() {
 
 it("should give 4 for IV", function() {
     expect(convertiseurRoman.of("IV")).toBe(4) 
+})
+
+it("should give 5 for V", function() {
+    expect(convertiseurRoman.of("V")).toBe(5)
 })
