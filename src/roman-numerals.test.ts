@@ -47,3 +47,7 @@ it("should give 5 for V", function() {
 it("should give 10 for X", function() {
     expect(convertiseurRoman.of("X")).toBe(10)
 })
+
+it("should give 50 for L", function() {
+    expect(convertiseurRoman.of("L")).toBe(50)
+})
