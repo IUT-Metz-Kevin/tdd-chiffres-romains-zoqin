@@ -18,6 +18,12 @@ class RomanNumeral {
         const currentValue = romanLetterToDecimal[romanNumber[i]]
         const nextValue = romanLetterToDecimal[romanNumber[i+1]]
         
+        //console.log(typeof currentValue === "number")
+
+        if(!(typeof currentValue === "number")) {
+            throw new Error("every caractere must be roman number");
+        }
+        
         //console.log("valeur actuelle", valeurActuelle, "prochaine valeur",prochaineValeur, "comparaison va<pv", valeurActuelle<prochaineValeur)
         
         if(nextValue && currentValue<nextValue) {
@@ -81,16 +87,16 @@ it("should give 450 for CDL", function() {
 })
 
 it("should throw error for string with letter outside of the roman number", function() {
-    expect(convertiseurRoman.of("abcdef")).toThrowError
-    expect(convertiseurRoman.of("ABCDEF")).toThrowError
+    expect(convertiseurRoman.of("abcdef")).toThrowError()
+    expect(convertiseurRoman.of("ABCDEF")).toThrowError()
 })
 
 it("should throw error for one letter outside of the roman number", function() {
-    expect(convertiseurRoman.of("MCMLXXXVIIIf")).toThrowError
-    expect(convertiseurRoman.of("MCMLXXXVIIIF")).toThrowError
+    expect(convertiseurRoman.of("MCMLXXXVIIIf")).toThrowError()
+    expect(convertiseurRoman.of("MCMLXXXVIIIF")).toThrowError()
 })
 
 it("should throw error for roman number in lower case", function() {
-    expect(convertiseurRoman.of("mcmlxxxviii")).toThrowError
-    expect(convertiseurRoman.of("cdl")).toThrowError
+    expect(convertiseurRoman.of("mcmlxxxviii")).toThrowError()
+    expect(convertiseurRoman.of("cdl")).toThrowError()
 })
