@@ -20,7 +20,7 @@ class RomanNumeral {
 
             //console.log(typeof currentValue === "number")
 
-            if (!(typeof currentValue === "number")) {
+            if (!currentValue) {
                 throw new Error("every caractere must be roman number");
             }
 
