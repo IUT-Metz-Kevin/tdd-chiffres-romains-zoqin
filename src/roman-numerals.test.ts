@@ -3,6 +3,14 @@ import { it, expect, test } from "vitest";
 class RomanNumeral {
   of(value: string): number {
     let number = 0
+    let tableOfConversionRomanToDecimal = {
+        'I' : 1,
+        'V' : 5,
+        'X' : 10,
+        'L' : 50,
+        'C' : 100,
+        'D' : 500
+    };
 
     for(let c of value) {
         if(c === "D") {
