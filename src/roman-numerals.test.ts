@@ -25,7 +25,6 @@ class RomanNumeral {
         } else {
             number += currentValue
         }
-        
     }
 
     return number
@@ -75,4 +74,8 @@ it("should give 999 for CMXCIX", function() {
 
 it("should give 1988 for MCMLXXXVIII", function() {
     expect(convertiseurRoman.of("MCMLXXXVIII")).toBe(1988)
+})
+
+it("should give 450 for CDL", function() {
+    expect(convertiseurRoman.of("CDL")).toBe(450)
 })
