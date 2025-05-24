@@ -84,3 +84,8 @@ it("should throw error for string with letter outside of the roman number", func
     expect(convertiseurRoman.of("abcdef")).toThrowError
     expect(convertiseurRoman.of("ABCDEF")).toThrowError
 })
+
+it("should throw error for one letter outside of the roman number", function() {
+    expect(convertiseurRoman.of("MCMLXXXVIIIf")).toThrowError
+    expect(convertiseurRoman.of("MCMLXXXVIIIF")).toThrowError
+})
