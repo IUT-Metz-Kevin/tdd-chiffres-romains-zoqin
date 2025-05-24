@@ -89,3 +89,8 @@ it("should throw error for one letter outside of the roman number", function() {
     expect(convertiseurRoman.of("MCMLXXXVIIIf")).toThrowError
     expect(convertiseurRoman.of("MCMLXXXVIIIF")).toThrowError
 })
+
+it("should throw error for roman number in lower case", function() {
+    expect(convertiseurRoman.of("mcmlxxxviii")).toThrowError
+    expect(convertiseurRoman.of("cdl")).toThrowError
+})
