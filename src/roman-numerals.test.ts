@@ -79,3 +79,8 @@ it("should give 1988 for MCMLXXXVIII", function() {
 it("should give 450 for CDL", function() {
     expect(convertiseurRoman.of("CDL")).toBe(450)
 })
+
+it("should throw error for string with letter outside of the roman number", function() {
+    expect(convertiseurRoman.of("abcdef")).toThrowError
+    expect(convertiseurRoman.of("ABCDEF")).toThrowError
+})
