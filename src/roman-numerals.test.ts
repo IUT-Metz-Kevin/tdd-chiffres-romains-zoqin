@@ -4,7 +4,7 @@ class RomanNumeral {
   of(romanNumber: string): number {
     let number = 0;
 
-    let romanLetterToDecimal = {
+    const romanLetterToDecimal = {
         'I' : 1,
         'V' : 5,
         'X' : 10,
@@ -14,9 +14,9 @@ class RomanNumeral {
         'M' : 1000
     };
 
-    for(let i = 0; i<romanNumber.length;i++ ) {
-        let currentValue = romanLetterToDecimal[romanNumber[i]]
-        let nextValue = romanLetterToDecimal[romanNumber[i+1]]
+    for(let i = 0; i<romanNumber.length;i++) {
+        const currentValue = romanLetterToDecimal[romanNumber[i]]
+        const nextValue = romanLetterToDecimal[romanNumber[i+1]]
         
         //console.log("valeur actuelle", valeurActuelle, "prochaine valeur",prochaineValeur, "comparaison va<pv", valeurActuelle<prochaineValeur)
         
