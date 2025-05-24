@@ -1,10 +1,10 @@
 import { it, expect, test } from "vitest";
 
 class RomanNumeral {
-  of(value: string): number {
+  of(romanNumber: string): number {
     let number = 0;
 
-    let tableOfConversionRomanToDecimal = {
+    let romanLetterToDecimal = {
         'I' : 1,
         'V' : 5,
         'X' : 10,
@@ -14,16 +14,16 @@ class RomanNumeral {
         'M' : 1000
     };
 
-    for(let i = 0; i<value.length;i++ ) {
-        let valeurActuelle = tableOfConversionRomanToDecimal[value[i]]
-        let prochaineValeur = tableOfConversionRomanToDecimal[value[i+1]]
+    for(let i = 0; i<romanNumber.length;i++ ) {
+        let currentValue = romanLetterToDecimal[romanNumber[i]]
+        let nextValue = romanLetterToDecimal[romanNumber[i+1]]
         
         //console.log("valeur actuelle", valeurActuelle, "prochaine valeur",prochaineValeur, "comparaison va<pv", valeurActuelle<prochaineValeur)
         
-        if(prochaineValeur && valeurActuelle<prochaineValeur) {
-            number -= valeurActuelle
+        if(nextValue && currentValue<nextValue) {
+            number -= currentValue
         } else {
-            number += valeurActuelle
+            number += currentValue
         }
         
     }
