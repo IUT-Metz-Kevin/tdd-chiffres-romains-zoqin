@@ -37,7 +37,15 @@ class RomanNumeral {
     }
 
     to(number: number): string {
-        return 'I'
+        let romanString = Object.keys(this._romanLetterToDecimal).filter(key => this._romanLetterToDecimal[key] === number)[0];
+        console.log(romanString)
+        if(romanString) {
+            return romanString
+        } else {
+            throw new Error("n'est pas un chiffre romain")
+        }
+         
+         
     }
 }
 
@@ -109,4 +117,29 @@ it("should throw error for roman number in lower case", function () {
 //to() test
 it("should give I-II-III for 1-3", function() {
     expect(convertiseurRoman.to(1)).toBe('I');
+    //expect(convertiseurRoman.to(2)).toBe('II');
+})
+
+it("should give 5 for V", function() {
+    expect(convertiseurRoman.to(5)).toBe('V');
+})
+
+it("should give 10 for X", function() {
+    expect(convertiseurRoman.to(10)).toBe('X');
+})
+
+it("should give 50 for L", function() {
+    expect(convertiseurRoman.to(50)).toBe('L');
+})
+
+it("should give 100 for C", function() {
+    expect(convertiseurRoman.to(100)).toBe('C');
+})
+
+it("should give 500 for D", function() {
+    expect(convertiseurRoman.to(500)).toBe('D');
+})
+
+it("should give 1000 for M", function() {
+    expect(convertiseurRoman.to(1000)).toBe('M');
 })
