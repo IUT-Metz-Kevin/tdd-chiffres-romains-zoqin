@@ -74,14 +74,14 @@ class RomanNumeral {
             return romanString
         }
         
-        romanString = Object.keys(this._romanLetterToDecimal).filter(key => this._romanLetterToDecimal[key] === number)[0];
-        console.log(romanString)
+        // romanString = Object.keys(this._romanLetterToDecimal).filter(key => this._romanLetterToDecimal[key] === number)[0];
+        // console.log(romanString)
 
-        if(romanString) {
-            return romanString
-        } else {
-            throw new Error("n'est pas un chiffre romain")
-        }
+        // if(romanString) {
+        //     return romanString
+        // } else {
+        //     throw new Error("n'est pas un chiffre romain")
+        // }
          
          
     }
