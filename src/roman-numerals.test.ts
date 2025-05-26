@@ -162,3 +162,7 @@ it("should give 500 for D", function() {
 it("should give 1000 for M", function() {
     expect(convertiseurRoman.to(1000)).toBe('M');
 })
+
+it("should give VI-VII-VIII for 6-8", function () {
+    expect(convertiseurRoman.to(6)).toBe("VI");
+});
