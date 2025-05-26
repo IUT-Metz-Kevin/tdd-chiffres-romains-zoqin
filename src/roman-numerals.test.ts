@@ -179,3 +179,7 @@ it("should give M-MM-MMM for 1000-2000-3000", function() {
     expect(convertiseurRoman.to(2000)).toBe('MM');
     expect(convertiseurRoman.to(3000)).toBe('MMM');
 })
+
+it("should give CD for 400", function() {
+    expect(convertiseurRoman.to(400)).toBe('CD');
+})
