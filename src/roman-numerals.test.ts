@@ -38,7 +38,7 @@ class RomanNumeral {
 
     to(number: number): string {
         let romanString = "";
-        if(number< 3) {
+        if(number<4) {
             while(number>0){
                 romanString += "I"
                 number--
