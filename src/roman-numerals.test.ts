@@ -172,6 +172,8 @@ it("should give D for 500", function() {
     expect(convertiseurRoman.to(500)).toBe('D');
 })
 
-it("should give M for 1000", function() {
+it("should give M-MM-MMM for 1000-2000-3000", function() {
     expect(convertiseurRoman.to(1000)).toBe('M');
+    expect(convertiseurRoman.to(2000)).toBe('MM');
+    expect(convertiseurRoman.to(3000)).toBe('MMM');
 })
