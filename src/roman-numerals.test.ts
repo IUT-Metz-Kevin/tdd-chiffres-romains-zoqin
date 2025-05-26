@@ -38,10 +38,13 @@ class RomanNumeral {
 
     to(number: number): string {
         let romanString = "";
-
+        if(number===4) {
+            romanString += "IV";
+            return romanString
+        }
         if(number<4) {
             while(number>0){
-                romanString += "I"
+                romanString += "I";
                 number--
             }
             return romanString
@@ -132,8 +135,8 @@ it("should give I-II-III for 1-3", function() {
     expect(convertiseurRoman.to(3)).toBe('III');
 })
 
-it("should give IV for 5", function() {
-    expect(convertiseurRoman.to(5)).toBe('IV');
+it("should give IV for 4", function() {
+    expect(convertiseurRoman.to(4)).toBe('IV');
 })
 
 it("should give 5 for V", function() {
