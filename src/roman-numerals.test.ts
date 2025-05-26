@@ -164,14 +164,14 @@ it("should give L for 50", function() {
     expect(convertiseurRoman.to(50)).toBe('L');
 })
 
-it("should give 100 for C", function() {
+it("should give C for 100", function() {
     expect(convertiseurRoman.to(100)).toBe('C');
 })
 
-it("should give 500 for D", function() {
+it("should give D for 500", function() {
     expect(convertiseurRoman.to(500)).toBe('D');
 })
 
-it("should give 1000 for M", function() {
+it("should give M for 1000", function() {
     expect(convertiseurRoman.to(1000)).toBe('M');
 })
