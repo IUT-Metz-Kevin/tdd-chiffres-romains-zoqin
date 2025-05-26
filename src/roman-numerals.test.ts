@@ -164,8 +164,10 @@ it("should give L for 50", function() {
     expect(convertiseurRoman.to(50)).toBe('L');
 })
 
-it("should give C for 100", function() {
+it("should give C-CC-CCC for 100-200-300", function() {
     expect(convertiseurRoman.to(100)).toBe('C');
+    expect(convertiseurRoman.to(200)).toBe('CC');
+    expect(convertiseurRoman.to(300)).toBe('CCC');
 })
 
 it("should give D for 500", function() {
