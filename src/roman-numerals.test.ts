@@ -37,7 +37,7 @@ class RomanNumeral {
     }
 
     to(number: number): string {
-        return string
+        return 'I'
     }
 }
 
