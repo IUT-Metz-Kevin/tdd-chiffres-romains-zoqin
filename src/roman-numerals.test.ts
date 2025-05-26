@@ -152,15 +152,15 @@ it("should give IV for 4", function() {
     expect(convertiseurRoman.to(4)).toBe('IV');
 })
 
-it("should give 5 for V", function() {
+it("should give V for 5", function() {
     expect(convertiseurRoman.to(5)).toBe('V');
 })
 
-it("should give 10 for X", function() {
+it("should give X for 10", function() {
     expect(convertiseurRoman.to(10)).toBe('X');
 })
 
-it("should give 50 for L", function() {
+it("should give L for 50", function() {
     expect(convertiseurRoman.to(50)).toBe('L');
 })
 
