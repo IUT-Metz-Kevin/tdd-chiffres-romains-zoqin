@@ -128,6 +128,7 @@ it("should throw error for roman number in lower case", function () {
 it("should give I-II-III for 1-3", function() {
     expect(convertiseurRoman.to(1)).toBe('I');
     expect(convertiseurRoman.to(2)).toBe('II');
+    expect(convertiseurRoman.to(3)).toBe('III');
 })
 
 it("should give 5 for V", function() {
