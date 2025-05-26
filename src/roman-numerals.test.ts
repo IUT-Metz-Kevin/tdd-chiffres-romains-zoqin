@@ -42,6 +42,14 @@ class RomanNumeral {
             romanString += "M"
             number -=1000
         }
+        while((number-500)>=0){
+            romanString += "D"
+            number -=500
+        }
+        while((number-100)>=0){
+            romanString += "C"
+            number -=100
+        }
         if(number===4) {
             romanString += "IV";
             return romanString
