@@ -35,11 +35,16 @@ class RomanNumeral {
 
         return number;
     }
+
+    to(number: number): string {
+        return string
+    }
 }
 
 let convertiseurRoman = new RomanNumeral();
 
 // Write your test here
+//of() test
 it("should give 1-2-3 for first 3I ", function () {
     expect(convertiseurRoman.of("I")).toBe(1),
         expect(convertiseurRoman.of("II")).toBe(2),
@@ -100,3 +105,8 @@ it("should throw error for roman number in lower case", function () {
     expect(() => convertiseurRoman.of("mcmlxxxviii")).toThrowError();
     expect(() => convertiseurRoman.of("cdl")).toThrowError();
 });
+
+//to() test
+it("should give I-II-III for 1-3", function() {
+    expect(convertiseurRoman.to(1)).toBe('I');
+})
