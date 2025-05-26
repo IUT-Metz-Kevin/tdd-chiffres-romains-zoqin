@@ -37,8 +37,18 @@ class RomanNumeral {
     }
 
     to(number: number): string {
-        let romanString = Object.keys(this._romanLetterToDecimal).filter(key => this._romanLetterToDecimal[key] === number)[0];
+        let romanString = "";
+        if(number< 3) {
+            while(number>0){
+                romanString += "I"
+                number--
+            }
+            return romanString
+        }
+        
+        romanString = Object.keys(this._romanLetterToDecimal).filter(key => this._romanLetterToDecimal[key] === number)[0];
         console.log(romanString)
+
         if(romanString) {
             return romanString
         } else {
