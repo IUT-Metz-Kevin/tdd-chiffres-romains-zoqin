@@ -54,6 +54,10 @@ class RomanNumeral {
             romanString += "L"
             number -=50
         }
+        while((number-10)>=0){
+            romanString += "X"
+            number -=10
+        }
         if(number===4) {
             romanString += "IV";
             return romanString
